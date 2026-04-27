@@ -15,10 +15,14 @@
           <p id="lb01Desc">멀티 센서 적용으로 체감온도와 경고 메시지를 실시간 출력 합니다.</p>
 
           <div class="lb01-actions">
-            <a href="#" class="lb01-btn lb01-btn-photo">📷 사진보내고 간단 견적 받기</a>
-            <div class="lb01-photo-desc">설치 위치 사진만 찍어 보내셔도 견적과 상담이 가능합니다!</div>
-            <a href="#" class="lb01-btn lb01-btn-main">맞춤 솔루션 보기</a>
-            <a href="#" class="lb01-btn lb01-btn-sub">견적 상담하기</a>
+            <div class="lb01-photo-box">
+              <a href="#" class="lb01-btn lb01-btn-photo">📷 사진보내고 간단 견적 받기</a>
+              <div class="lb01-photo-desc">설치 위치 사진만 찍어 보내셔도 견적과 상담이 가능합니다!</div>
+            </div>
+            <div class="lb01-sub-actions">
+              <a href="#" class="lb01-btn lb01-btn-main">맞춤 솔루션 보기</a>
+              <a href="#" class="lb01-btn lb01-btn-sub">견적 상담하기</a>
+            </div>
           </div>
         </div>
 
@@ -162,9 +166,31 @@
 
   #lb-section01-slider .lb01-actions {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 30px;
+  }
+
+  #lb-section01-slider .lb01-photo-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #lb-section01-slider .lb01-photo-desc {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.45;
+    text-shadow: 0 2px 10px rgba(0,0,0,.35);
+  }
+
+  #lb-section01-slider .lb01-sub-actions {
+    display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    margin-top: 30px;
   }
 
   #lb-section01-slider .lb01-btn {
@@ -381,7 +407,13 @@
       padding: 54px 16px 28px;
     }
 
-    #lb-section01-slider .lb01-actions {
+    #lb-section01-slider .lb01-actions,
+    #lb-section01-slider .lb01-photo-box,
+    #lb-section01-slider .lb01-sub-actions {
+      width: 100%;
+    }
+
+    #lb-section01-slider .lb01-sub-actions {
       flex-direction: column;
     }
 
