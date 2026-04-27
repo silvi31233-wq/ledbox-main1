@@ -1,0 +1,530 @@
+<!-- LEDBOX 메인 섹션 1 : 산업/공공/특수목적 전광판 슬라이드 -->
+<section id="lb-section01-slider">
+  <div class="lb01-hero">
+    <div class="lb01-bg"></div>
+
+    <div class="lb01-container">
+      <div class="lb01-slide-wrap">
+        <!-- LEFT TEXT -->
+        <div class="lb01-copy">
+          <span id="lb01Eyebrow" class="lb01-eyebrow">WBGT Heat-stress LED DISPLAY</span>
+          <h1 id="lb01Title">
+            혹서기 안전을 위한<br>
+            <strong>LED 전광판</strong>
+          </h1>
+          <p id="lb01Desc">멀티 센서 적용으로 체감온도와 경고 메시지를 실시간 출력 합니다.</p>
+
+          <div class="lb01-actions">
+            <a href="#" class="lb01-btn lb01-btn-photo">📷 사진보내고 간단 견적 받기</a>
+            <a href="#" class="lb01-btn lb01-btn-main">맞춤 솔루션 보기</a>
+            <a href="#" class="lb01-btn lb01-btn-sub">견적 상담하기</a>
+          </div>
+        </div>
+
+        <!-- RIGHT LED PREVIEW -->
+        <div class="lb01-preview">
+          <div class="lb01-ledbox">
+            <div id="lb01LedLine1" class="lb01-led-line lb01-red">위험 · 주의 · 안전상태</div>
+            <div id="lb01LedLine2" class="lb01-led-line lb01-green">TEMP 32.5℃ · HUM 68%</div>
+            <div id="lb01LedLine3" class="lb01-led-line lb01-yellow">WBGT 경계 단계</div>
+          </div>
+
+          <div class="lb01-mini-specs">
+            <div><b>24H</b><span>상시 운영</span></div>
+            <div><b>PLC</b><span>설비 연동</span></div>
+            <div><b>IP</b><span>실외 대응</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE BADGES -->
+      <div id="lb01Badges" class="lb01-badges"></div>
+    </div>
+  </div>
+
+  <!-- BOTTOM MENU -->
+  <nav class="lb01-menu" aria-label="전광판 솔루션 메뉴">
+    <button type="button" class="is-active" data-slide="0">
+      <strong>WBGT</strong>
+      <span>혹서기 체감온도</span>
+    </button>
+    <button type="button" data-slide="1">
+      <strong>산업용</strong>
+      <span>공장 · 물류 · 설비 상태 표시</span>
+    </button>
+    <button type="button" data-slide="2">
+      <strong>관공서용</strong>
+      <span>공공 안내 · 재난 안전 정보</span>
+    </button>
+    <button type="button" data-slide="3">
+      <strong>특수목적</strong>
+      <span>R&amp;D · 배터리 · 특수구조</span>
+    </button>
+    <button type="button" data-slide="4">
+      <strong>상가·홍보</strong>
+      <span>고휘도 · 고해상도 · 방수</span>
+    </button>
+  </nav>
+</section>
+
+<style>
+  #lb-section01-slider,
+  #lb-section01-slider * {
+    box-sizing: border-box;
+  }
+
+  #lb-section01-slider {
+    font-family: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    color: #fff;
+    background: #07111f;
+    overflow: hidden;
+  }
+
+  #lb-section01-slider a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  #lb-section01-slider .lb01-hero {
+    position: relative;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #07111f;
+  }
+
+  #lb-section01-slider .lb01-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 72% 28%, rgba(14,165,233,.24), transparent 30%),
+      linear-gradient(110deg, rgba(3,7,18,.98), rgba(15,23,42,.91) 48%, rgba(15,23,42,.66)),
+      url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+    transform: scale(1.02);
+    transition: opacity .35s ease;
+  }
+
+  #lb-section01-slider .lb01-container {
+    position: relative;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 76px 20px 34px;
+  }
+
+  #lb-section01-slider .lb01-slide-wrap {
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 44px;
+    align-items: center;
+  }
+
+  #lb-section01-slider .lb01-copy {
+    transition: opacity .2s ease, transform .2s ease;
+  }
+
+  #lb-section01-slider .lb01-copy.is-changing {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  #lb-section01-slider .lb01-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #7dd3fc;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .12em;
+  }
+
+  #lb-section01-slider h1 {
+    margin: 0;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.12;
+    letter-spacing: -.055em;
+    font-weight: 900;
+  }
+
+  #lb-section01-slider h1 strong {
+    color: #38bdf8;
+    font-weight: 900;
+  }
+
+  #lb-section01-slider p {
+    margin: 22px 0 0;
+    color: #cbd5e1;
+    font-size: 18px;
+    line-height: 1.72;
+    word-break: keep-all;
+  }
+
+  #lb-section01-slider .lb01-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  #lb-section01-slider .lb01-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 20px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 900;
+    transition: .18s ease;
+    white-space: nowrap;
+  }
+
+  #lb-section01-slider .lb01-btn-photo {
+    background: linear-gradient(135deg, #f97316, #ef4444);
+    color: #fff;
+    box-shadow: 0 12px 28px rgba(239,68,68,.35);
+    animation: lb01Pulse 1.8s ease-in-out infinite;
+  }
+
+  #lb-section01-slider .lb01-btn-main {
+    background: #0284c7;
+    color: #fff;
+  }
+
+  #lb-section01-slider .lb01-btn-sub {
+    border: 1px solid rgba(255,255,255,.42);
+    color: #fff;
+    background: rgba(255,255,255,.04);
+  }
+
+  #lb-section01-slider .lb01-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  @keyframes lb01Pulse {
+    0%, 100% { box-shadow: 0 12px 28px rgba(239,68,68,.34); }
+    50% { box-shadow: 0 12px 36px rgba(249,115,22,.56); }
+  }
+
+  #lb-section01-slider .lb01-preview {
+    background: rgba(15,23,42,.72);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 30px;
+    padding: 26px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.45);
+    backdrop-filter: blur(10px);
+    transition: opacity .2s ease, transform .2s ease;
+  }
+
+  #lb-section01-slider .lb01-preview.is-changing {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+
+  #lb-section01-slider .lb01-ledbox {
+    background: #030712;
+    border-radius: 22px;
+    padding: 24px;
+    min-height: 250px;
+    border: 8px solid #1f2937;
+    display: grid;
+    align-content: center;
+    gap: 18px;
+    box-shadow: inset 0 0 45px rgba(56,189,248,.08);
+  }
+
+  #lb-section01-slider .lb01-led-line {
+    font-family: 'Malgun Gothic', monospace;
+    font-size: clamp(20px, 2.2vw, 30px);
+    font-weight: 900;
+    letter-spacing: -.02em;
+    text-shadow: 0 0 10px currentColor;
+    word-break: keep-all;
+  }
+
+  #lb-section01-slider .lb01-red { color: #fb7185; }
+  #lb-section01-slider .lb01-green { color: #4ade80; }
+  #lb-section01-slider .lb01-yellow { color: #facc15; }
+
+  #lb-section01-slider .lb01-mini-specs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  #lb-section01-slider .lb01-mini-specs div {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 18px;
+    padding: 16px;
+    text-align: center;
+  }
+
+  #lb-section01-slider .lb01-mini-specs b {
+    display: block;
+    font-size: 23px;
+    color: #fff;
+  }
+
+  #lb-section01-slider .lb01-mini-specs span {
+    display: block;
+    margin-top: 2px;
+    color: #cbd5e1;
+    font-size: 13px;
+  }
+
+  #lb-section01-slider .lb01-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 32px;
+  }
+
+  #lb-section01-slider .lb01-badges span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: 0 15px;
+    border-radius: 999px;
+    background: rgba(15,23,42,.86);
+    border: 1px solid rgba(148,163,184,.24);
+    color: #dbeafe;
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(0,0,0,.16);
+  }
+
+  #lb-section01-slider .lb01-badges span:before {
+    content: '✓';
+    color: #38bdf8;
+    margin-right: 7px;
+  }
+
+  #lb-section01-slider .lb01-menu {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px 0;
+    background: #0f172a;
+  }
+
+  #lb-section01-slider .lb01-menu button {
+    appearance: none;
+    border: 0;
+    border-left: 1px solid rgba(255,255,255,.08);
+    background: #0f172a;
+    color: #fff;
+    text-align: left;
+    padding: 22px 20px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: .18s ease;
+    min-height: 86px;
+  }
+
+  #lb-section01-slider .lb01-menu button:last-child {
+    border-right: 1px solid rgba(255,255,255,.08);
+  }
+
+  #lb-section01-slider .lb01-menu button strong {
+    display: block;
+    font-size: 17px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+
+  #lb-section01-slider .lb01-menu button span {
+    display: block;
+    font-size: 13px;
+    line-height: 1.35;
+    color: #94a3b8;
+    word-break: keep-all;
+  }
+
+  #lb-section01-slider .lb01-menu button:hover,
+  #lb-section01-slider .lb01-menu button.is-active {
+    background: linear-gradient(180deg, #075985, #0f172a);
+  }
+
+  #lb-section01-slider .lb01-menu button.is-active {
+    box-shadow: inset 0 4px 0 #38bdf8;
+  }
+
+  #lb-section01-slider .lb01-menu button.is-active strong {
+    color: #7dd3fc;
+  }
+
+  @media (max-width: 1024px) {
+    #lb-section01-slider .lb01-slide-wrap {
+      grid-template-columns: 1fr;
+    }
+
+    #lb-section01-slider .lb01-menu {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    #lb-section01-slider .lb01-menu button:last-child {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 720px) {
+    #lb-section01-slider .lb01-hero {
+      min-height: auto;
+    }
+
+    #lb-section01-slider .lb01-container {
+      padding: 54px 16px 28px;
+    }
+
+    #lb-section01-slider .lb01-actions {
+      flex-direction: column;
+    }
+
+    #lb-section01-slider .lb01-btn {
+      width: 100%;
+    }
+
+    #lb-section01-slider .lb01-preview {
+      padding: 16px;
+      border-radius: 22px;
+    }
+
+    #lb-section01-slider .lb01-ledbox {
+      min-height: 220px;
+      padding: 18px;
+      border-width: 6px;
+    }
+
+    #lb-section01-slider .lb01-mini-specs,
+    #lb-section01-slider .lb01-menu {
+      grid-template-columns: 1fr;
+    }
+
+    #lb-section01-slider .lb01-menu {
+      padding: 0;
+    }
+
+    #lb-section01-slider .lb01-menu button,
+    #lb-section01-slider .lb01-menu button:last-child {
+      grid-column: auto;
+      border-left: 0;
+      border-right: 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      min-height: auto;
+      padding: 18px 20px;
+    }
+  }
+</style>
+
+<script>
+(function () {
+  var root = document.getElementById('lb-section01-slider');
+  if (!root) return;
+
+  var slides = [
+    {
+      eyebrow: 'WBGT Heat-stress LED DISPLAY',
+      titleTop: '혹서기 안전을 위한',
+      titleStrong: 'LED 전광판',
+      desc: '멀티 센서 적용으로 체감온도와 경고 메시지를 실시간 출력 합니다.',
+      badges: ['멀티 센서 / 자동 연산', '작업자 안전 / 중대재해 처벌 예방', '이상 기온 대비'],
+      led1: '체감온도 · WBGT 표시',
+      led2: 'TEMP 32.5℃ · HUM 68%',
+      led3: '혹서기 경계 단계'
+    },
+    {
+      eyebrow: 'INDUSTRIAL LED DISPLAY',
+      titleTop: '산업현장을 위한',
+      titleStrong: '맞춤형 LED 전광판',
+      desc: '센서, PLC, IoT 연동으로 실시간 출력 합니다.',
+      badges: ['센서/PLC/IoT 연동', 'TCP·IP/RS232/RS485', '방수방진/내구성', '직접생산증명'],
+      led1: '설비 상태 · 알람 표시',
+      led2: 'PLC DATA · IoT LINK',
+      led3: '공장 · 물류 · 생산현장'
+    },
+    {
+      eyebrow: 'PUBLIC LED DISPLAY',
+      titleTop: '공공안내를 위한',
+      titleStrong: '맞춤형 LED 전광판',
+      desc: '관공서, 공공장소, 공항, 도로 실시간 정보를 출력 합니다.',
+      badges: ['조달청/직접생산', '기상정보연계/API', '교통정보연계/API', '안내/경보 시스템'],
+      led1: '공공 안내 · 재난 정보',
+      led2: 'WEATHER · TRAFFIC API',
+      led3: '실시간 안내 시스템'
+    },
+    {
+      eyebrow: 'Purpose-built LED DISPLAY',
+      titleTop: '특수목적을 위한',
+      titleStrong: '맞춤형 LED 전광판',
+      desc: '안내, 계량, 경보 등 실시간 정보를 출력 합니다.',
+      badges: ['연구개발/제품개발', '건축/공사', '태양광/배터리 구동', '투명/캐비넷'],
+      led1: 'R&D · 특수 구조 표시',
+      led2: 'BATTERY · SOLAR OPTION',
+      led3: '목적별 맞춤 제작'
+    },
+    {
+      eyebrow: 'Commercial Digital LED DISPLAY',
+      titleTop: '홍보 및 안내를 위한',
+      titleStrong: '일반형 LED 전광판',
+      desc: '소형부터 대형까지 다양한 정보를 출력 합니다.',
+      badges: ['고휘도/고해상도', '방수방진/내구성', '텍스트 최적화'],
+      led1: '매장 홍보 · 안내 문구',
+      led2: 'HIGH BRIGHTNESS LED',
+      led3: '소형부터 대형까지'
+    }
+  ];
+
+  var eyebrow = root.querySelector('#lb01Eyebrow');
+  var title = root.querySelector('#lb01Title');
+  var desc = root.querySelector('#lb01Desc');
+  var badges = root.querySelector('#lb01Badges');
+  var led1 = root.querySelector('#lb01LedLine1');
+  var led2 = root.querySelector('#lb01LedLine2');
+  var led3 = root.querySelector('#lb01LedLine3');
+  var copy = root.querySelector('.lb01-copy');
+  var preview = root.querySelector('.lb01-preview');
+  var menuButtons = root.querySelectorAll('.lb01-menu button');
+
+  function renderBadges(items) {
+    badges.innerHTML = items.map(function (item) {
+      return '<span>' + item + '</span>';
+    }).join('');
+  }
+
+  function setSlide(index) {
+    var item = slides[index];
+
+    copy.classList.add('is-changing');
+    preview.classList.add('is-changing');
+
+    setTimeout(function () {
+      eyebrow.textContent = item.eyebrow;
+      title.innerHTML = item.titleTop + '<br><strong>' + item.titleStrong + '</strong>';
+      desc.textContent = item.desc;
+      led1.textContent = item.led1;
+      led2.textContent = item.led2;
+      led3.textContent = item.led3;
+      renderBadges(item.badges);
+
+      menuButtons.forEach(function (btn) {
+        btn.classList.toggle('is-active', Number(btn.getAttribute('data-slide')) === index);
+      });
+
+      copy.classList.remove('is-changing');
+      preview.classList.remove('is-changing');
+    }, 160);
+  }
+
+  menuButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      setSlide(Number(btn.getAttribute('data-slide')));
+    });
+  });
+
+  renderBadges(slides[0].badges);
+})();
+</script>
