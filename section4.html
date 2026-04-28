@@ -1,0 +1,421 @@
+<!-- LEDBOX 메인 섹션 4 : 대표 제품 3가지 -->
+<section id="lb-section04-products">
+  <div class="lb04-container">
+    <div class="lb04-head">
+      <span class="lb04-eyebrow">PRODUCTS</span>
+      <h2>대표 제품 3가지</h2>
+      <p>현장 용도에 맞는 최적의 전광판 시스템을 제안합니다.</p>
+    </div>
+
+    <div class="lb04-grid" id="lb04ProductGrid"></div>
+  </div>
+</section>
+
+<style>
+  #lb-section04-products,
+  #lb-section04-products * {
+    box-sizing: border-box;
+  }
+
+  #lb-section04-products {
+    font-family: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    padding: 78px 0 86px;
+    overflow: hidden;
+  }
+
+  #lb-section04-products .lb04-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  #lb-section04-products .lb04-head {
+    margin-bottom: 36px;
+  }
+
+  #lb-section04-products .lb04-eyebrow {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #f97316;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: .18em;
+  }
+
+  #lb-section04-products h2 {
+    margin: 0;
+    color: #020617;
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.15;
+    letter-spacing: -.055em;
+    font-weight: 900;
+  }
+
+  #lb-section04-products .lb04-head p {
+    margin: 14px 0 0;
+    color: #64748b;
+    font-size: 16px;
+  }
+
+  #lb-section04-products .lb04-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  #lb-section04-products .lb04-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .06);
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+  }
+
+  #lb-section04-products .lb04-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 24px 52px rgba(15, 23, 42, .12);
+    border-color: #fed7aa;
+  }
+
+  #lb-section04-products .lb04-img {
+    position: relative;
+    height: 210px;
+    background: #0f172a center/cover no-repeat;
+  }
+
+  #lb-section04-products .lb04-img:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(2,6,23,0) 45%, rgba(2,6,23,.72) 100%);
+  }
+
+  #lb-section04-products .lb04-img-caption {
+    position: absolute;
+    left: 18px;
+    bottom: 14px;
+    z-index: 2;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    text-shadow: 0 2px 12px rgba(0,0,0,.35);
+  }
+
+  #lb-section04-products .lb04-body {
+    padding: 24px 24px 22px;
+  }
+
+  #lb-section04-products .lb04-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: #f97316;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 900;
+    margin-bottom: 14px;
+  }
+
+  #lb-section04-products .lb04-card:nth-child(2) .lb04-num,
+  #lb-section04-products .lb04-card:nth-child(2) .lb04-btn-main {
+    background: #0284c7;
+  }
+
+  #lb-section04-products .lb04-card:nth-child(3) .lb04-num,
+  #lb-section04-products .lb04-card:nth-child(3) .lb04-btn-main {
+    background: #059669;
+  }
+
+  #lb-section04-products .lb04-card h3 {
+    margin: 0;
+    color: #020617;
+    font-size: 21px;
+    line-height: 1.35;
+    letter-spacing: -.035em;
+    font-weight: 900;
+    word-break: keep-all;
+  }
+
+  #lb-section04-products .lb04-subtitle {
+    margin: 8px 0 18px;
+    color: #ea580c;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.45;
+    word-break: keep-all;
+  }
+
+  #lb-section04-products .lb04-card:nth-child(2) .lb04-subtitle {
+    color: #0284c7;
+  }
+
+  #lb-section04-products .lb04-card:nth-child(3) .lb04-subtitle {
+    color: #059669;
+  }
+
+  #lb-section04-products .lb04-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 9px;
+  }
+
+  #lb-section04-products .lb04-list li {
+    color: #334155;
+    font-size: 14px;
+    line-height: 1.5;
+    word-break: keep-all;
+  }
+
+  #lb-section04-products .lb04-list li:before {
+    content: '✓';
+    color: #f97316;
+    margin-right: 8px;
+    font-weight: 900;
+  }
+
+  #lb-section04-products .lb04-card:nth-child(2) .lb04-list li:before {
+    color: #0284c7;
+  }
+
+  #lb-section04-products .lb04-card:nth-child(3) .lb04-list li:before {
+    color: #059669;
+  }
+
+  #lb-section04-products .lb04-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 18px;
+  }
+
+  #lb-section04-products .lb04-tags span {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 0 12px;
+    border-radius: 999px;
+    background: #fff7ed;
+    color: #9a3412;
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  #lb-section04-products .lb04-card:nth-child(2) .lb04-tags span {
+    background: #e0f2fe;
+    color: #075985;
+  }
+
+  #lb-section04-products .lb04-card:nth-child(3) .lb04-tags span {
+    background: #dcfce7;
+    color: #166534;
+  }
+
+  #lb-section04-products .lb04-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  #lb-section04-products .lb04-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 900;
+    text-decoration: none;
+    transition: transform .18s ease, background .18s ease;
+  }
+
+  #lb-section04-products .lb04-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  #lb-section04-products .lb04-btn-outline {
+    border: 1px solid #f97316;
+    color: #0f172a;
+    background: #fff;
+  }
+
+  #lb-section04-products .lb04-card:nth-child(2) .lb04-btn-outline {
+    border-color: #0284c7;
+  }
+
+  #lb-section04-products .lb04-card:nth-child(3) .lb04-btn-outline {
+    border-color: #059669;
+  }
+
+  #lb-section04-products .lb04-btn-main {
+    background: #f97316;
+    color: #fff;
+  }
+
+  @media (max-width: 1024px) {
+    #lb-section04-products .lb04-grid {
+      grid-template-columns: 1fr;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    #lb-section04-products .lb04-img {
+      height: 260px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    #lb-section04-products {
+      padding: 62px 0 68px;
+    }
+
+    #lb-section04-products .lb04-container {
+      padding: 0 16px;
+    }
+
+    #lb-section04-products .lb04-head {
+      margin-bottom: 28px;
+    }
+
+    #lb-section04-products .lb04-img {
+      height: 210px;
+    }
+
+    #lb-section04-products .lb04-body {
+      padding: 22px 20px 20px;
+    }
+
+    #lb-section04-products .lb04-actions {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+(function () {
+  var root = document.getElementById('lb-section04-products');
+  if (!root) return;
+
+  var products = [
+    {
+      num: '01',
+      title: 'WBGT, 혹서기 열스트레스 전광판',
+      subtitle: '체감온도 별 작업 지침 출력',
+      image: '1.png',
+      caption: '온도 · 습도 · WBGT 경보 표시',
+      list: [
+        'WBGT(Wet-Bulb Globe Temperature)',
+        '멀티센서 측정으로 현장 기상 정보 반영',
+        '작업중지 기준 단계별 경보 자동 출력',
+        '공장 건설현장 안전관리 특화',
+        'RS485, TCP/IP 통신'
+      ],
+      tags: ['멀티센서 연동', 'WBGT 자동계산', '방수방진'],
+      productUrl: '#',
+      quoteUrl: '#'
+    },
+    {
+      num: '02',
+      title: '산업용 전광판',
+      subtitle: '생산관리, 조업정보 실시간 출력',
+      image: '2.png',
+      caption: '공장 생산관리 · 조업정보 표시',
+      list: [
+        'PLC, PC, 센서 데이터 실시간 수신',
+        '생산량, 목표수량, 조업상태 동시 출력',
+        'Color matrix, 7-segment LED 고시인성',
+        'IoT, 센서 등 다양한 시스템 연동',
+        'RS485, TCP/IP, Modbus 등 다양한 통신'
+      ],
+      tags: ['PLC 연동', 'RS485, TCP/IP', '소형~대형'],
+      productUrl: '#',
+      quoteUrl: '#'
+    },
+    {
+      num: '03',
+      title: '기상 · 환경 · 관공서 · 상업용 전광판',
+      subtitle: '공공 데이터 연동, 안내 및 홍보물 출력',
+      image: '3.png',
+      caption: '공공 안내 · 상업 홍보 · 환경 정보',
+      list: [
+        '다양한 규격의 패널 모듈',
+        '기상, 환경 공공 데이터 연동',
+        'IR리모콘, TCP/IP 등 원격 콘텐츠 관리',
+        '가볍고 견고한 구조로 높은 내구성',
+        '무상A/S 1년 보증'
+      ],
+      tags: ['기상·환경 정보', '원격관리', '1년 A/S'],
+      productUrl: '#',
+      quoteUrl: '#'
+    }
+  ];
+
+  var grid = root.querySelector('#lb04ProductGrid');
+
+  function makeCard(item) {
+    var listHtml = item.list.map(function (text) {
+      return '<li>' + text + '</li>';
+    }).join('');
+
+    var tagHtml = item.tags.map(function (text) {
+      return '<span>' + text + '</span>';
+    }).join('');
+
+    return '' +
+      '<article class="lb04-card">' +
+        '<div class="lb04-img" style="background-image:url(' + item.image + ')">' +
+          '<div class="lb04-img-caption">' + item.caption + '</div>' +
+        '</div>' +
+        '<div class="lb04-body">' +
+          '<span class="lb04-num">' + item.num + '</span>' +
+          '<h3>' + item.title + '</h3>' +
+          '<div class="lb04-subtitle">' + item.subtitle + '</div>' +
+          '<ul class="lb04-list">' + listHtml + '</ul>' +
+          '<div class="lb04-tags">' + tagHtml + '</div>' +
+          '<div class="lb04-actions">' +
+            '<a href="' + item.productUrl + '" class="lb04-btn lb04-btn-outline">제품 둘러보기</a>' +
+            '<a href="' + item.quoteUrl + '" class="lb04-btn lb04-btn-main">견적 문의하기 &gt;</a>' +
+          '</div>' +
+        '</div>' +
+      '</article>';
+  }
+
+  grid.innerHTML = products.map(makeCard).join('');
+
+  var cards = root.querySelectorAll('.lb04-card');
+
+  function revealCards() {
+    cards.forEach(function (card, index) {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(18px)';
+      setTimeout(function () {
+        card.style.transition = 'opacity .45s ease, transform .45s ease, box-shadow .22s ease, border-color .22s ease';
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, index * 120);
+    });
+  }
+
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          revealCards();
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.18 });
+    observer.observe(root);
+  } else {
+    revealCards();
+  }
+})();
+</script>
