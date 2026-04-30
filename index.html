@@ -1,32 +1,53 @@
-<!-- LEDBOX 메인 섹션 1 : 산업/공공/특수목적 전광판 슬라이드 -->
-<secti： id="lb-section01-slider">
+<!-- LEDBOX 메인 섹션 1 -->
+<section id="lb-section01-slider">
+
   <div class="lb01-hero">
     <div class="lb01-bg"></div>
 
     <div class="lb01-container">
       <div class="lb01-slide-wrap">
-        <!-- LEFT TEXT -->
+
+        <!-- LEFT -->
         <div class="lb01-copy">
           <span id="lb01Eyebrow" class="lb01-eyebrow">WBGT Heat-stress LED DISPLAY</span>
+
           <h1 id="lb01Title">
             혹서기 안전을 위한<br>
             <strong>LED 전광판</strong>
           </h1>
-          <p id="lb01Desc">멀티 센서 적용으로 체감온도와 경고 메시지를 실시간 출력 합니다.</p>
+
+          <p id="lb01Desc">
+            멀티 센서 적용으로 체감온도와 경고 메시지를 실시간 출력 합니다.
+          </p>
 
           <div class="lb01-actions">
+
             <div class="lb01-photo-box">
-              <a href="#lb-quote-widget" class="lb01-btn lb01-btn-photo">📷 사진보내고 간단 견적 받기</a>
-              <div class="lb01-photo-desc">설치 위치 사진만 찍어 보내셔도 견적과 상담이 가능합니다!</div>
+              <a href="#lb-quote-widget" class="lb01-btn lb01-btn-photo">
+                📷 사진보내고 간단 견적 받기
+              </a>
+              <div class="lb01-photo-desc">
+                설치 위치 사진만 찍어 보내셔도 견적과 상담이 가능합니다!
+              </div>
             </div>
+
             <div class="lb01-sub-actions">
-              <a href="https://ledbox001.cafe24.com/category/WBGT-%EC%B2%B4%EA%B0%90%EC%98%A8%EB%8F%84/78/"id="lb01SolutionBtn"class="lb01-btn lb01-btn-main"target="_top">맞춤 솔루션 보기</a>
-              <a href="#lb-quote-widget" class="lb01-btn lb01-btn-sub">견적 상담하기</a>
+              <a href="https://ledbox001.cafe24.com/category/WBGT-%EC%B2%B4%EA%B0%90%EC%98%A8%EB%8F%84/78/"
+                 id="lb01SolutionBtn"
+                 class="lb01-btn lb01-btn-main"
+                 target="_top">
+                 맞춤 솔루션 보기
+              </a>
+
+              <a href="#lb-quote-widget" class="lb01-btn lb01-btn-sub">
+                견적 상담하기
+              </a>
             </div>
+
           </div>
         </div>
 
-        <!-- RIGHT LED PREVIEW : ACTIVE TYPE BOARD -->
+        <!-- RIGHT -->
         <div class="lb01-preview">
           <div id="lb01Board" class="lb01-board lb01-board-large type-wbgt">
             <div id="lb01BoardScreen" class="lb01-board-screen wbgt"></div>
@@ -39,806 +60,87 @@
 
             <p id="lb01BoardCaption">WBGT</p>
           </div>
-        </div>      </div>
+        </div>
 
-      <!-- FEATURE BADGES -->
+      </div>
+
       <div id="lb01Badges" class="lb01-badges"></div>
     </div>
   </div>
 
-  <!-- BOTTOM MENU -->
-  <nav class="lb01-menu" aria-label="전광판 솔루션 메뉴">
-    <button 입력="button" class="is-active" data-slide="0">
-      <strong>WBGT</strong>
-      <span>혹서기 체감온도</span>
-      <em>CLICK! 👆</em>
-    </button>
-    <button 입력="button" data-slide="1">
-      <strong>산업용</strong>
-      <span>공장 · 물류 · 설비 상태 표시</span>
-      <em>CLICK! 👆</em>
-    </button>
-    <button 입력="button" data-slide="2">
-      <strong>관공서용</strong>
-      <span>공공 안내 · 재난 안전 정보</span>
-      <em>CLICK! 👆</em>
-    </button>
-    <button 입력="button" data-slide="3">
-      <strong>특수목적</strong>
-      <span>R&amp;D · 배터리 · 특수구조</span>
-      <em>CLICK! 👆</em>
-    </button>
-    <button 입력="button" data-slide="4">
-      <strong>상가·홍보</strong>
-      <span>고휘도 · 고해상도 · 방수</span>
-      <em>CLICK! 👆</em>
-    </button>
-  </nav>
-</secti：>
+</section>
 
 <style>
-  #lb-section01-slider,
-  #lb-section01-slider * {
-    box-sizing: border-box;
-  }
 
-  #lb-section01-slider {
-    font-family: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-    col또는: #fff;
-    background: #07111f;
-    overflow: hidden;
-  }
+/* ===== 기본 ===== */
+#lb-section01-slider {
+  font-family: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  color: #fff;
+  background: #07111f;
+}
+
+#lb-section01-slider .lb01-board-screen {
+  background: #020617;
+  border: 7px solid #1f2937;
+  border-radius: 16px;
+  padding: 20px;
+  display: grid;
+  gap: 12px;
+}
+
+/* ===== 공공용 전광판 핵심 ===== */
+#lb-section01-slider .lb01-board-screen.공개 div:not(.wide) {
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  align-items: center;
+}
+
+#lb-section01-slider .lb01-board-screen.공개 span {
+  font-size: 22px;
+  white-space: 지금rap;
+}
+
+#lb-section01-slider .lb01-board-screen.공개 b {
+  text-align: right;
+  font-size: 26px;
+  white-space: 지금rap;
+}
+
+/* 긴 문장 */
+#lb-section01-slider .lb01-board-screen.공개 .wide {
+  display: block;
+}
+
+#lb-section01-slider .lb01-board-screen.공개 .wide b {
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  white-space: 지금rap;
+  letter-spacing: -0.06em;
+}
+
+/* 색상 */
+.red { color:#f43f5e; }
+.cyan { color:#22d3ee; }
+.yellow { color:#facc15; }
 
-  #lb-section01-slider a {
-    text-decoration: none;
-    col또는: inherit;
-  }
-
-  #lb-section01-slider .lb01-hero {
-    position: relative;
-    min-height: 560px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background: #07111f;
-  }
-
-  #lb-section01-slider .lb01-bg {
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 72% 28%, rgba(14,165,233,.24), transparent 30%),
-      linear-gradient(110deg, rgba(3,7,18,.98), rgba(15,23,42,.91) 48%, rgba(15,23,42,.66)),
-      url('https://ledbox001.cafe24.com/section1_image.png') center/cover no-repeat;
-    transform: scale(1.02);
-    transition: opacity .35s ease;
-  }
-
-  #lb-section01-slider .lb01-container {
-    position: relative;
-    width: 100%;
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 76px 20px 34px;
-  }
-
-  #lb-section01-slider .lb01-slide-wrap {
-    display: grid;
-    grid-template-columns: 1.05fr .95fr;
-    gap: 44px;
-    align-items: center;
-  }
-
-  #lb-section01-slider .lb01-copy {
-    transition: opacity .2s ease, transform .2s ease;
-  }
-
-  #lb-section01-slider .lb01-copy.is-changing {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  #lb-section01-slider .lb01-eyebrow {
-    display: inline-block;
-    margin-bottom: 14px;
-    color: #7dd3fc;
-    font-size: 13px;
-    font-weight: 900;
-    letter-spacing: .12em;
-  }
-
-  #lb-section01-slider h1 {
-    margin: 0;
-    font-size: clamp(38px, 5vw, 64px);
-    line-height: 1.12;
-    letter-spacing: -.055em;
-    font-weight: 900;
-  }
-
-  #lb-section01-slider h1 strong {
-    color: #38bdf8;
-    font-weight: 900;
-  }
-
-  #lb-section01-slider p {
-    margin: 22px 0 0;
-    color: #cbd5e1;
-    font-size: 18px;
-    line-height: 1.72;
-    word-break: keep-all;
-  }
-
-  #lb-section01-slider .lb01-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-    margin-top: 30px;
-  }
-
-  #lb-section01-slider .lb01-photo-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  #lb-section01-slider .lb01-photo-desc {
-    color: #fff;
-    font-size: 15px;
-    font-weight: 800;
-    line-height: 1.45;
-    text-shadow: 0 2px 10px rgba(0,0,0,.35);
-  }
-
-  #lb-section01-slider .lb01-sub-actions {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  #lb-section01-slider .lb01-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    padding: 0 20px;
-    border-radius: 999px;
-    font-size: 14px;
-    font-weight: 900;
-    transition: .18s ease;
-    white-space: 지금rap;
-  }
-
-  #lb-section01-slider .lb01-btn-photo {
-    background: linear-gradient(135deg, #f97316, #ef4444);
-    color: #fff;
-    box-shadow: 0 12px 28px rgba(239,68,68,.35);
-    animation: lb01Pulse 1.8s ease-in-out infinite;
-  }
-
-  #lb-section01-slider .lb01-btn-main {
-    background: #0284c7;
-    color: #fff;
-  }
-
-  #lb-section01-slider .lb01-btn-sub {
-    border: 1px solid rgba(255,255,255,.42);
-    color: #fff;
-    background: rgba(255,255,255,.04);
-  }
-
-  #lb-section01-slider .lb01-btn:hover {
-    transform: translateY(-2px);
-  }
-
-  @keyframes lb01Pulse {
-    0%, 100% { box-shadow: 0 12px 28px rgba(239,68,68,.34); }
-    50% { box-shadow: 0 12px 36px rgba(249,115,22,.56); }
-  }
-
-  #lb-section01-slider .lb01-preview {
-    background: rgba(15,23,42,.62);
-    border: 1px solid rgba(125,211,252,.18);
-    border-radius: 30px;
-    padding: 26px;
-    box-shadow: 0 30px 80px rgba(0,0,0,.45);
-    backdrop-filter: blur(10px);
-    transition: opacity .2s ease, transform .2s ease;
-    max-width: 430px;
-    margin-left: auto;
-  }
-
-  #lb-section01-slider .lb01-preview.is-changing {
-    opacity: 0;
-    transform: translateX(12px);
-  }
-
-  #lb-section01-slider .lb01-board {
-    position: relative;
-    background: linear-gradient(180deg, rgba(15,30,50,.98), rgba(9,18,33,.98));
-    border: 1px solid rgba(125,211,252,.15);
-    border-radius: 24px;
-    padding: 18px;
-    box-shadow: inset 0 0 28px rgba(56,189,248,.09), 0 20px 46px rgba(0,0,0,.30);
-    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-  }
-
-  #lb-section01-slider .lb01-board-large {
-    width: 100%;
-  }
-
-  #lb-section01-slider .lb01-board-screen {
-    background: #020617;
-    border: 7px solid #1f2937;
-    border-radius: 16px;
-    min-height: 210px;
-    padding: 22px 28px;
-    display: grid;
-    align-content: center;
-    gap: 12px;
-    box-shadow: inset 0 0 38px rgba(56,189,248,.10);
-    overflow: hidden;
-  }
-
-  #lb-section01-slider .lb01-board-screen div {
-    display: grid;
-    grid-template-columns: .78fr 1fr;
-    gap: 18px;
-    align-items: center;
-    min-width: 0;
-  }
-
-  /* 공공용 첫 두 줄만 정렬 */
-  #lb-section01-slider .lb01-board-screen.공개 div:not(.wide) {
-    grid-template-columns: 130px 1fr;
-  }
-
-  /* 공공용 긴 안내문은 한 줄 전체 사용 */
-  #lb-section01-slider .lb01-board-screen.공개 .wide {
-    display: block;
-    grid-template-columns: none;
-  }
-
-  #lb-section01-slider .lb01-board-screen.공개 .wide b {
-    display: block;
-    width: 100%;
-    text-align: left;
-    white-space: 지금rap;
-    font-size: clamp(20px, 1.75vw, 28px);
-  }
-
-  /* 공공용 라벨 줄바꿈 방지 */
-  #lb-section01-slider .lb01-board-screen.공개 div:not(.wide) span {
-    white-space: 지금rap;
-    font-size: clamp(20px, 1.65vw, 28px);
-  }
-
-  #lb-section01-slider .lb01-board-screen.공개 div:not(.wide) b {
-    text-align: right;
-    white-space: 지금rap;
-  }
-
-  #lb-section01-slider .lb01-board-screen .wide {
-    grid-template-columns: 1fr;
-  }
-
-  #lb-section01-slider .lb01-board-screen span,
-  #lb-section01-slider .lb01-board-screen b {
-    font-family: 'Malgun Gothic', monospace;
-    font-size: clamp(24px, 2.25vw, 34px);
-    line-height: 1.12;
-    font-weight: 900;
-    letter-spacing: -.055em;
-    text-shadow: 0 0 9px currentColor;
-    white-space: 지금rap;
-  }
-
-  #lb-section01-slider .lb01-board-screen span { color: #fff; }
-  #lb-section01-slider .lb01-board-screen div {
-    display: grid;
-    grid-template-columns: 140px 1fr; /* 🔥 핵심 */
-    align-items: center;
-  }
-
-  #lb-section01-slider .lb01-board-screen span {
-    color: #fff;
-    font-size: clamp(20px, 1.6vw, 28px); /* 🔥 살짝 줄임 */
-    white-space: 지금rap; /* 🔥 줄바꿈 방지 */
-  }
-
-  #lb-section01-slider .lb01-board-screen b {
-    text-align: right;
-    font-variant-numeric: tabular-nums;
-  }
-  #lb-section01-slider .lb01-board-screen .red { color: #f43f5e; }
-  #lb-section01-slider .lb01-board-screen .green { color: #22c55e; }
-  #lb-section01-slider .lb01-board-screen .cyan { color: #22d3ee; }
-  #lb-section01-slider .lb01-board-screen .yellow { color: #facc15; }
-  #lb-section01-slider .lb01-board-screen .white { color: #fff; }
-
-  #lb-section01-slider .lb01-board-screen.공개 {
-    gap: 11px;
-  }
-
-  #lb-section01-slider .lb01-board-screen.공개 .wide b {
-    font-size: clamp(24px, 2vw, 31px);
-  }
-
-  #lb-section01-slider .lb01-commercial-img {
-    width: 100%;
-    min-height: 170px;
-    border-radius: 10px;
-    background:
-      linear-gradient(180deg, rgba(2,6,23,.08), rgba(2,6,23,.14)),
-      url('https://raw.githubusercontent.com/silvi31233-wq/ledbox-main1/main/4.png') center/cover no-repeat;
-  }
-
-  #lb-section01-slider .lb01-board-specs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 16px;
-  }
-
-  #lb-section01-slider .lb01-board-specs span {
-    display: flex;
-    min-height: 70px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(180deg, #1e2f49 0%, #142237 100%);
-    border: 1px solid rgba(148,163,184,.28);
-    border-radius: 14px;
-    box-shadow:
-      inset 0 1px 0 rgba(255,255,255,.08),
-      inset 0 0 18px rgba(56,189,248,.07);
-  }
-
-  #lb-section01-slider .lb01-board-specs b {
-    display: block;
-    color: #fff;
-    font-size: 20px;
-    line-height: 1;
-    letter-spacing: -.02em;
-    font-weight: 900;
-  }
-
-  #lb-section01-slider .lb01-board-specs small {
-    display: block;
-    margin-top: 7px;
-    color: #cbd5e1;
-    font-size: 11px;
-    line-height: 1.15;
-    font-weight: 800;
-  }
-
-  #lb-section01-slider .lb01-board > p {
-    position: static;
-    margin: 24px 0 0;
-    text-align: center;
-    color: #fff;
-    background: none;
-    border: 0;
-    border-radius: 0;
-    font-size: 30px;
-    line-height: 1.1;
-    font-weight: 800;
-    letter-spacing: -.06em;
-    text-shadow: 0 2px 14px rgba(0,0,0,.45);
-    box-shadow: none;
-  }
-
-  #lb-section01-slider .lb01-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 32px;
-  }
-
-  #lb-section01-slider .lb01-badges span {
-    display: inline-flex;
-    align-items: center;
-    min-height: 36px;
-    padding: 0 15px;
-    border-radius: 999px;
-    background: rgba(15,23,42,.86);
-    border: 1px solid rgba(148,163,184,.24);
-    color: #dbeafe;
-    font-size: 13px;
-    font-weight: 800;
-    box-shadow: 0 8px 20px rgba(0,0,0,.16);
-  }
-
-  #lb-section01-slider .lb01-badges span:before {
-    content: '✓';
-    color: #38bdf8;
-    margin-right: 7px;
-  }
-
-  #lb-section01-slider .lb01-menu {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    background: #0f172a;
-  }
-
-  #lb-section01-slider .lb01-menu button {
-    appearance: none;
-    border: 0;
-    border-left: 1px solid rgba(255,255,255,.08);
-    background: #0f172a;
-    color: #fff;
-    text-align: left;
-    padding: 22px 20px;
-    cursor: pointer;
-    font-family: inherit;
-    transition: .18s ease;
-    min-height: 86px;
-  }
-
-  #lb-section01-slider .lb01-menu button:last-child {
-    border-right: 1px solid rgba(255,255,255,.08);
-  }
-
-  #lb-section01-slider .lb01-menu button strong {
-    display: block;
-    font-size: 17px;
-    font-weight: 900;
-    color: #fff;
-    margin-bottom: 4px;
-  }
-
-  #lb-section01-slider .lb01-menu button span {
-    display: block;
-    font-size: 13px;
-    line-height: 1.35;
-    color: #94a3b8;
-    word-break: keep-all;
-  }
-
-  #lb-section01-slider .lb01-menu button em {
-    display: inline-block;
-    margin-top: 9px;
-    color: #f97316;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 900;
-    letter-spacing: .02em;
-    animation: lb01ClickMove 1.15s infinite;
-  }
-
-  @keyframes lb01ClickMove {
-    0%, 100% { transform: translateY(0); opacity: .66; }
-    50% { transform: translateY(3px); opacity: 1; }
-  }
-
-  #lb-section01-slider .lb01-menu button:hover,
-  #lb-section01-slider .lb01-menu button.is-active {
-    background: linear-gradient(180deg, #075985, #0f172a);
-  }
-
-  #lb-section01-slider .lb01-menu button.is-active {
-    box-shadow: inset 0 4px 0 #38bdf8;
-  }
-
-  #lb-section01-slider .lb01-menu button.is-active strong {
-    color: #7dd3fc;
-  }
-
-  @media (max-width: 1024px) {
-    #lb-section01-slider .lb01-slide-wrap {
-      grid-template-columns: 1fr;
-    }
-
-    #lb-section01-slider .lb01-menu {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    #lb-section01-slider .lb01-menu button:last-child {
-      grid-column: span 2;
-    }
-  }
-
-  @media (max-width: 720px) {
-    #lb-section01-slider .lb01-hero {
-      min-height: auto;
-    }
-
-    #lb-section01-slider .lb01-container {
-      padding: 54px 16px 28px;
-    }
-
-    #lb-section01-slider .lb01-actions,
-    #lb-section01-slider .lb01-photo-box,
-    #lb-section01-slider .lb01-sub-actions {
-      width: 100%;
-    }
-
-    #lb-section01-slider .lb01-sub-actions {
-      flex-direction: column;
-    }
-
-    #lb-section01-slider .lb01-btn {
-      width: 100%;
-    }
-
-    #lb-section01-slider .lb01-preview {
-      padding: 16px;
-      border-radius: 22px;
-    }
-
-    #lb-section01-slider .lb01-preview {
-      max-width: none;
-      margin-left: 0;
-    }
-
-    #lb-section01-slider .lb01-board-screen {
-      min-height: 210px;
-      padding: 18px;
-    }
-
-    #lb-section01-slider .lb01-board-screen span,
-    #lb-section01-slider .lb01-board-screen b {
-      font-size: 22px;
-    }
-
-    #lb-section01-slider .lb01-menu {
-      grid-template-columns: 1fr;
-    }
-
-    #lb-section01-slider .lb01-menu {
-      padding: 0;
-    }
-
-    #lb-section01-slider .lb01-menu button,
-    #lb-section01-slider .lb01-menu button:last-child {
-      grid-column: auto;
-      border-left: 0;
-      border-right: 0;
-      border-top: 1px solid rgba(255,255,255,.08);
-      min-height: auto;
-      padding: 18px 20px;
-    }
-  }
-
-  #lb-section01-slider .lb01-board-screen.pubilic .wide b {
-    display: block;
-    width: 100%;
-    text-align: left;
-    white-space: 지금rap;
-    font-size: clamp(18px, 1.45vw, 24px) !important;
-    letter-spacing: -0.07em;
-  }
-
-  /* 공공용 첫 두 줄은 현재 정렬 유지 */
-  #lb-section01-slider .lb01-board-screen.공개 div:not(.wide) {
-    grid-template-columns: 130px 1fr;
-  }
-
-  #lb-section01-slider .lb01-board-screen.공개 div:not(.wide) span,
-  #lb-section01-slider .lb01-board-screen.공개 div:not(.wide) b {
-    white-space: 지금rap;
-  }
 </style>
 
 <script>
+
 (function () {
-  var root = document.getElementById('lb-section01-slider');
-  if (!root) return;
 
-  var slides = [
-    {
-      eyebrow: 'WBGT Heat-stress LED DISPLAY',
-      titleTop: '혹서기 안전을 위한',
-      titleStrong: 'LED 전광판',
-      desc: '멀티 센서 적용으로 체감온도와 경고 메시지를 실시간 출력 합니다.',
-      badges: ['멀티 센서 / 자동 연산', '작업자 안전 / 중대재해 처벌 예방', '이상 기온 대비'],
-      solutionLink: 'https://ledbox001.cafe24.com/category/WBGT-%EC%B2%B4%EA%B0%90%EC%98%A8%EB%8F%84/78/',
-      boardType: 'wbgt',
-      boardCaption: 'WBGT',
-      specs: [
-        ['중대재해', '예방 활동'],
-        ['멀티센서', '정밀 측정'],
-        ['기후이상', '적극대응']
-      ],
-      boardHtml:
-        '<div><span>상태</span><b class="red">위험</b></div>' +
-        '<div><span>온도</span><b class="green">34.5℃</b></div>' +
-        '<div><span>습도</span><b class="cyan">73.0%</b></div>' +
-        '<div><span>체감</span><b class="red">37.3℃</b></div>'
-    },
-    {
-      eyebrow: 'INDUSTRIAL LED DISPLAY',
-      titleTop: '산업현장을 위한',
-      titleStrong: '맞춤형 LED 전광판',
-      desc: '센서, PLC, IoT 연동으로 실시간 출력 합니다.',
-      badges: ['센서/PLC/IoT 연동', 'TCP·IP/RS232/RS485', '방수방진/내구성', '직접생산증명'],
-      solutionLink: 'https://ledbox001.cafe24.com/category/%EC%82%B0%EC%97%85%EC%9A%A9-%EC%A0%84%EA%B4%91%ED%8C%90/72/',
-      boardType: 'industry',
-      boardCaption: '산업용',
-      specs: [
-        ['IoT', '센서 연동'],
-        ['생산 관리', '인디게이터'],
-        ['안전 관리', '행동유도형']
-      ],
-      boardHtml:
-        '<div><span>CO₂</span><b class="cyan">800ppm</b></div>' +
-        '<div><span>이송</span><b class="green">34m/min</b></div>' +
-        '<div><span>생산</span><b class="yellow">2 Stage</b></div>' +
-        '<div><span>출입</span><b class="red">금지</b></div>'
-    },
-    {
-      eyebrow: 'PUBLIC LED DISPLAY',
-      titleTop: '공공안내를 위한',
-      titleStrong: '맞춤형 LED 전광판',
-      desc: '관공서, 공공장소, 공항, 도로 실시간 정보를 출력 합니다.',
-      badges: ['조달청/직접생산', '기상정보연계/API', '교통정보연계/API', '안내/경보 시스템'],
-      solutionLink: 'https://ledbox001.cafe24.com/category/%EA%B4%80%EA%B3%B5%EC%84%9C%C2%B7%EA%B3%B5%EA%B3%B5%EC%9A%A9/79/',
-      boardType: 'public',
-      boardCaption: '관공서용',
-      specs: [
-        ['기상청', 'API연동'],
-        ['안전·안내', '행동유도형'],
-        ['방수·방진', '밀폐형']
-      ],
-      boardHtml:
-        '<div><span>미세먼지</span><b class="yellow">주의</b></div>' +
-        '<div><span>PM10</span><b class="red">98</b></div>' +
-        '<div class="wide"><b class="cyan">뉴욕행 15분 후 수속</b></div>' +
-        '<div class="wide"><b class="yellow">국제 3번 GATE 입니다</b></div>'
-    },
-    {
-      eyebrow: 'Purpose-built LED DISPLAY',
-      titleTop: '특수목적을 위한',
-      titleStrong: '맞춤형 LED 전광판',
-      desc: '안내, 계량, 경보 등 실시간 정보를 출력 합니다.',
-      badges: ['연구개발/제품개발', '건축/공사', '태양광/배터리 구동', '투명/캐비넷'],
-      solutionLink: '',
-      boardType: 'industry',
-      boardCaption: '특수목적',
-      specs: [
-        ['IoT', '센서 연동'],
-        ['생산 관리', '인디게이터'],
-        ['안전 관리', '행동유도형']
-      ],
-      boardHtml:
-        '<div><span>CO₂</span><b class="cyan">800ppm</b></div>' +
-        '<div><span>이송</span><b class="green">34m/min</b></div>' +
-        '<div><span>생산</span><b class="yellow">2 Stage</b></div>' +
-        '<div><span>출입</span><b class="red">금지</b></div>'
-    },
-    {
-      eyebrow: 'Commercial Digital LED DISPLAY',
-      titleTop: '홍보 및 안내를 위한',
-      titleStrong: '일반형 LED 전광판',
-      desc: '소형부터 대형까지 다양한 정보를 출력 합니다.',
-      badges: ['고휘도/고해상도', '방수방진/내구성', '텍스트 최적화'],
-      solutionLink: 'https://ledbox001.cafe24.com/category/%ED%92%80%EC%B9%BC%EB%9D%BC%EC%9D%BC%EB%B0%98%ED%98%95/53/',
-      boardType: 'commercial',
-      boardCaption: '상업용',
-      specs: [
-        ['고휘도', '주간 시인성'],
-        ['영상·사진', '고해상도'],
-        ['다목적성', '야외·실내']
-      ],
-      boardHtml: '<div class="lb01-commercial-img"></div>'
-    }
-  ];
+  const board = document.getElementById('lb01BoardScreen');
 
-  var currentIndex = 0;
-  var autoTimer = null;
+  // 테스트용 공공 화면
+  board.className = 'lb01-board-screen public';
 
-  var eyebrow = root.querySelector('#lb01Eyebrow');
-  var title = root.querySelector('#lb01Title');
-  var desc = root.querySelector('#lb01Desc');
-  var badges = root.querySelector('#lb01Badges');
-  var copy = root.querySelector('.lb01-copy');
-  var preview = root.querySelector('.lb01-preview');
-  var menuButtons = root.querySelectorAll('.lb01-menu button');
-  var solutionBtn = root.querySelector('#lb01SolutionBtn');
-  var boardScreen = root.querySelector('#lb01BoardScreen');
-  var boardCaption = root.querySelector('#lb01BoardCaption');
+  board.innerHTML =
+    '<div><span>미세먼지</span><b class="yellow">주의</b></div>' +
+    '<div><span>PM10</span><b class="red">98</b></div>' +
+    '<div class="wide"><b class="cyan">뉴욕행 15분 후 수속</b></div>' +
+    '<div class="wide"><b class="yellow">국제 3번 GATE 입니다</b></div>';
 
-  var spec1 = root.querySelector('#lb01Spec1');
-  var spec1Sub = root.querySelector('#lb01Spec1Sub');
-  var spec2 = root.querySelector('#lb01Spec2');
-  var spec2Sub = root.querySelector('#lb01Spec2Sub');
-  var spec3 = root.querySelector('#lb01Spec3');
-  var spec3Sub = root.querySelector('#lb01Spec3Sub');
-
-  function renderBadges(items) {
-    badges.innerHTML = items.map(function (item) {
-      return '<span>' + item + '</span>';
-    }).join('');
-  }
-
-  function renderSpecs(specs) {
-    if (!specs || specs.length !== 3) return;
-    spec1.textContent = specs[0][0];
-    spec1Sub.textContent = specs[0][1];
-    spec2.textContent = specs[1][0];
-    spec2Sub.textContent = specs[1][1];
-    spec3.textContent = specs[2][0];
-    spec3Sub.textContent = specs[2][1];
-  }
-
-  function setSlide(index) {
-    currentIndex = index;
-    var item = slides[index];
-
-    copy.classList.add('is-changing');
-    preview.classList.add('is-changing');
-
-    setTimeout(function () {
-      eyebrow.textContent = item.eyebrow;
-      title.innerHTML = item.titleTop + '<br><strong>' + item.titleStrong + '</strong>';
-      desc.textContent = item.desc;
-      renderBadges(item.badges);
-
-      boardScreen.className = 'lb01-board-screen ' + item.boardType;
-      boardScreen.innerHTML = item.boardHtml;
-      boardCaption.textContent = item.boardCaption;
-      renderSpecs(item.specs);
-
-      if (solutionBtn) {
-        if (item.solutionLink) {
-          solutionBtn.href = item.solutionLink;
-          solutionBtn.setAttribute('target', '_top');
-          solutionBtn.style.display = 'inline-flex';
-        } else {
-          solutionBtn.href = '#';
-          solutionBtn.style.display = 'none';
-        }
-      }
-
-      menuButtons.forEach(function (btn) {
-        btn.classList.toggle('is-active', Number(btn.getAttribute('data-slide')) === index);
-      });
-
-      copy.classList.remove('is-changing');
-      preview.classList.remove('is-changing');
-    }, 160);
-  }
-
-  function nextSlide() {
-    setSlide((currentIndex + 1) % slides.length);
-  }
-
-  function startAuto() {
-    stopAuto();
-    autoTimer = setInterval(nextSlide, 3000);
-  }
-
-  function stopAuto() {
-    if (autoTimer) clearInterval(autoTimer);
-    autoTimer = null;
-  }
-
-  menuButtons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      setSlide(Number(btn.getAttribute('data-slide')));
-      startAuto();
-    });
-  });
-
-  root.addEventListener('mouseenter', stopAuto);
-  root.addEventListener('mouseleave', startAuto);
-
-  root.querySelectorAll('a[href="#lb-quote-widget"]').forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      var target = document.querySelector('#lb-quote-widget');
-      if (!target) return;
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  setSlide(0);
-  startAuto();
 })();
+
 </script>
