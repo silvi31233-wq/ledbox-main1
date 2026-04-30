@@ -379,17 +379,13 @@
           '<div class="lb04-tags">' + tagHtml + '</div>' +
           '<div class="lb04-actions">' +
             '<a href="' + item.productUrl + '" target="_top" class="lb04-btn lb04-btn-outline">제품 둘러보기</a>' +
-            '<a href="https://ledbox001.cafe24.com/#lb-quote-widget" target="_top"class="lb04-btn lb04-btn-main">견적 문의하기 &gt;</a>' +
+            '<a href="https://ledbox001.cafe24.com/#lb-quote-widget" target="_top" class="lb04-btn lb04-btn-main">견적 문의하기 &gt;</a>'+
           '</div>' +
         '</div>' +
       '</article>';
   }
 
   grid.innerHTML = products.map(makeCard).join('');
-
-  root.addEventListener('click', function (e) {
-  var btn = e.target.closest('.lb04-quote-btn');
-  if (!btn) return;
 
   var target = document.getElementById('lb-quote-widget');
   if (!target) {
