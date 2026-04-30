@@ -20,7 +20,7 @@
               <div class="lb01-photo-desc">설치 위치 사진만 찍어 보내셔도 견적과 상담이 가능합니다!</div>
             </div>
             <div class="lb01-sub-actions">
-              <a href="#" class="lb01-btn lb01-btn-main">맞춤 솔루션 보기</a>
+              <a href="https://ledbox001.cafe24.com/category/WBGT-%EC%B2%B4%EA%B0%90%EC%98%A8%EB%8F%84/78/" id="lb01SolutionBtn" class="lb01-btn lb01-btn-main">맞춤 솔루션 보기</a>
               <a href="#" class="lb01-btn lb01-btn-sub">견적 상담하기</a>
             </div>
           </div>
@@ -467,7 +467,8 @@
       badges: ['멀티 센서 / 자동 연산', '작업자 안전 / 중대재해 처벌 예방', '이상 기온 대비'],
       led1: '체감온도 · WBGT 표시',
       led2: 'TEMP 32.5℃ · HUM 68%',
-      led3: '혹서기 경계 단계'
+      led3: '혹서기 경계 단계',
+      solutionLink: 'https://ledbox001.cafe24.com/category/WBGT-%EC%B2%B4%EA%B0%90%EC%98%A8%EB%8F%84/78/'
     },
     {
       eyebrow: 'INDUSTRIAL LED DISPLAY',
@@ -477,7 +478,8 @@
       badges: ['센서/PLC/IoT 연동', 'TCP·IP/RS232/RS485', '방수방진/내구성', '직접생산증명'],
       led1: '설비 상태 · 알람 표시',
       led2: 'PLC DATA · IoT LINK',
-      led3: '공장 · 물류 · 생산현장'
+      led3: '공장 · 물류 · 생산현장',
+      solutionLink: 'https://ledbox001.cafe24.com/category/%EC%82%B0%EC%97%85%EC%9A%A9-%EC%A0%84%EA%B4%91%ED%8C%90/72/'
     },
     {
       eyebrow: 'PUBLIC LED DISPLAY',
@@ -487,7 +489,8 @@
       badges: ['조달청/직접생산', '기상정보연계/API', '교통정보연계/API', '안내/경보 시스템'],
       led1: '공공 안내 · 재난 정보',
       led2: 'WEATHER · TRAFFIC API',
-      led3: '실시간 안내 시스템'
+      led3: '실시간 안내 시스템',
+      solutionLink: 'https://ledbox001.cafe24.com/category/%EA%B4%80%EA%B3%B5%EC%84%9C%C2%B7%EA%B3%B5%EA%B3%B5%EC%9A%A9/79/'
     },
     {
       eyebrow: 'Purpose-built LED DISPLAY',
@@ -497,7 +500,8 @@
       badges: ['연구개발/제품개발', '건축/공사', '태양광/배터리 구동', '투명/캐비넷'],
       led1: 'R&D · 특수 구조 표시',
       led2: 'BATTERY · SOLAR OPTION',
-      led3: '목적별 맞춤 제작'
+      led3: '목적별 맞춤 제작',
+      solutionLink: ''
     },
     {
       eyebrow: 'Commercial Digital LED DISPLAY',
@@ -507,7 +511,8 @@
       badges: ['고휘도/고해상도', '방수방진/내구성', '텍스트 최적화'],
       led1: '매장 홍보 · 안내 문구',
       led2: 'HIGH BRIGHTNESS LED',
-      led3: '소형부터 대형까지'
+      led3: '소형부터 대형까지',
+      solutionLink: 'https://ledbox001.cafe24.com/category/%ED%92%80%EC%B9%BC%EB%9D%BC%EC%9D%BC%EB%B0%98%ED%98%95/53/'
     }
   ];
 
@@ -521,6 +526,7 @@
   var copy = root.querySelector('.lb01-copy');
   var preview = root.querySelector('.lb01-preview');
   var menuButtons = root.querySelectorAll('.lb01-menu button');
+  var solutionBtn = root.querySelector('#lb01SolutionBtn');
 
   function renderBadges(items) {
     badges.innerHTML = items.map(function (item) {
@@ -543,6 +549,16 @@
       led3.textContent = item.led3;
       renderBadges(item.badges);
 
+      if (solutionBtn) {
+        if (item.solutionLink) {
+          solutionBtn.href = item.solutionLink;
+          solutionBtn.style.display = 'inline-flex';
+        } else {
+          solutionBtn.href = '#';
+          solutionBtn.style.display = 'none';
+        }
+      }
+
       menuButtons.forEach(function (btn) {
         btn.classList.toggle('is-active', Number(btn.getAttribute('data-slide')) === index);
       });
@@ -559,5 +575,6 @@
   });
 
   renderBadges(slides[0].badges);
+  if (solutionBtn) solutionBtn.href = slides[0].solutionLink;
 })();
 </script>
