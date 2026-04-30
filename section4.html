@@ -387,16 +387,27 @@
 
   grid.innerHTML = products.map(makeCard).join('');
 
-  root.querySelectorAll('.lb04-quote-btn').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      var target = document.querySelector('#lb-quote-widget');
-      if (!target) return;
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
+  root.addEventListener('click', function (e) {
+  var btn = e.target.closest('.lb04-quote-btn');
+  if (!btn) return;
 
-  var cards = root.querySelectorAll('.lb04-card');
+  var target = document.getElementById('lb-quote-widget');
+  if (!target) {
+    console.log('lb-quote-widget 섹션을 찾지 못했습니다.');
+    return;
+  }
+
+  e.preventDefault();
+
+  var y = target.getBoundingClientRect().top + window.pageYOffset - 80;
+
+  window.scrollTo({
+    top: y,
+    behavior: 'smooth'
+  });
+});
+  
+   var cards = root.querySelectorAll('.lb04-card');
 
   function revealCards() {
     cards.forEach(function (card, index) {
@@ -423,18 +434,6 @@
   } else {
     revealCards();
   }
-  root.querySelectorAll('a[href="#lb-quote-widget"]').forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
-    var target = document.querySelector('#lb-quote-widget');
-    if (!target) return;
-
-    e.preventDefault();
-
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
-  });
-});
+  
 })();
 </script>
