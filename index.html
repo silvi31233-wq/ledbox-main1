@@ -84,14 +84,14 @@
 
   #lb-section01-slider {
     font-family: 'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-    color: #fff;
+    col또는: #fff;
     background: #07111f;
     overflow: hidden;
   }
 
   #lb-section01-slider a {
     text-decoration: none;
-    color: inherit;
+    col또는: inherit;
   }
 
   #lb-section01-slider .lb01-hero {
@@ -207,7 +207,7 @@
     font-size: 14px;
     font-weight: 900;
     transition: .18s ease;
-    white-space: nowrap;
+    white-space: 지금rap;
   }
 
   #lb-section01-slider .lb01-btn-photo {
@@ -604,6 +604,25 @@
       min-height: auto;
       padding: 18px 20px;
     }
+  }
+
+  #lb-section01-slider .lb01-board-screen.pubilic .wide b {
+    display: block;
+    width: 100%;
+    text-align: left;
+    white-space: 지금rap;
+    font-size: clamp(18px, 1.45vw, 24px) !important;
+    letter-spacing: -0.07em;
+  }
+
+  /* 공공용 첫 두 줄은 현재 정렬 유지 */
+  #lb-section01-slider .lb01-board-screen.공개 div:not(.wide) {
+    grid-template-columns: 130px 1fr;
+  }
+
+  #lb-section01-slider .lb01-board-screen.공개 div:not(.wide) span,
+  #lb-section01-slider .lb01-board-screen.공개 div:not(.wide) b {
+    white-space: 지금rap;
   }
 </style>
 
