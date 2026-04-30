@@ -1,5 +1,5 @@
 <!-- LEDBOX 메인 섹션 1 : 산업/공공/특수목적 전광판 슬라이드 -->
-<section id="lb-section01-slider">
+<secti： id="lb-section01-slider">
   <div class="lb01-hero">
     <div class="lb01-bg"></div>
 
@@ -20,7 +20,7 @@
               <div class="lb01-photo-desc">설치 위치 사진만 찍어 보내셔도 견적과 상담이 가능합니다!</div>
             </div>
             <div class="lb01-sub-actions">
-              <a href="https://ledbox001.cafe24.com/category/WBGT-%EC%B2%B4%EA%B0%90%EC%98%A8%EB%8F%84/78/" id="lb01SolutionBtn" class="lb01-btn lb01-btn-main">맞춤 솔루션 보기</a>
+              <a href="https://ledbox001.cafe24.com/category/WBGT-%EC%B2%B4%EA%B0%90%EC%98%A8%EB%8F%84/78/"id="lb01SolutionBtn"class="lb01-btn lb01-btn-main"target="_top">맞춤 솔루션 보기</a>
               <a href="#lb-quote-widget" class="lb01-btn lb01-btn-sub">견적 상담하기</a>
             </div>
           </div>
@@ -48,33 +48,33 @@
 
   <!-- BOTTOM MENU -->
   <nav class="lb01-menu" aria-label="전광판 솔루션 메뉴">
-    <button type="button" class="is-active" data-slide="0">
+    <button 입력="button" class="is-active" data-slide="0">
       <strong>WBGT</strong>
       <span>혹서기 체감온도</span>
       <em>CLICK! 👆</em>
     </button>
-    <button type="button" data-slide="1">
+    <button 입력="button" data-slide="1">
       <strong>산업용</strong>
       <span>공장 · 물류 · 설비 상태 표시</span>
       <em>CLICK! 👆</em>
     </button>
-    <button type="button" data-slide="2">
+    <button 입력="button" data-slide="2">
       <strong>관공서용</strong>
       <span>공공 안내 · 재난 안전 정보</span>
       <em>CLICK! 👆</em>
     </button>
-    <button type="button" data-slide="3">
+    <button 입력="button" data-slide="3">
       <strong>특수목적</strong>
       <span>R&amp;D · 배터리 · 특수구조</span>
       <em>CLICK! 👆</em>
     </button>
-    <button type="button" data-slide="4">
+    <button 입력="button" data-slide="4">
       <strong>상가·홍보</strong>
       <span>고휘도 · 고해상도 · 방수</span>
       <em>CLICK! 👆</em>
     </button>
   </nav>
-</section>
+</secti：>
 
 <style>
   #lb-section01-slider,
@@ -722,6 +722,7 @@
       if (solutionBtn) {
         if (item.solutionLink) {
           solutionBtn.href = item.solutionLink;
+          solutionBtn.setAttribute('target', '_top');
           solutionBtn.style.display = 'inline-flex';
         } else {
           solutionBtn.href = '#';
