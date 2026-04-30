@@ -306,6 +306,22 @@
   }
 
   #lb-section01-slider .lb01-board-screen span { color: #fff; }
+  #lb-section01-slider .lb01-board-screen div {
+    display: grid;
+    grid-template-columns: 140px 1fr; /* 🔥 핵심 */
+    align-items: center;
+  }
+
+  #lb-section01-slider .lb01-board-screen span {
+    color: #fff;
+    font-size: clamp(20px, 1.6vw, 28px); /* 🔥 살짝 줄임 */
+    white-space: 지금rap; /* 🔥 줄바꿈 방지 */
+  }
+
+  #lb-section01-slider .lb01-board-screen b {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
   #lb-section01-slider .lb01-board-screen .red { color: #f43f5e; }
   #lb-section01-slider .lb01-board-screen .green { color: #22c55e; }
   #lb-section01-slider .lb01-board-screen .cyan { color: #22d3ee; }
