@@ -318,7 +318,7 @@
         '공장 건설현장 안전관리 특화',
         'RS485, TCP/IP 통신'
       ],
-      꼬리표: ['멀티센서 연동', 'WBGT 자동계산', '방수방진'],
+      tags: ['멀티센서 연동', 'WBGT 자동계산', '방수방진'],
       productUrl: 'https://ledbox001.cafe24.com/category/WBGT-%EC%B2%B4%EA%B0%90%EC%98%A8%EB%8F%84/78/'
     },
     {
@@ -334,7 +334,7 @@
         'IoT, 센서 등 다양한 시스템 연동',
         'RS485, TCP/IP, Modbus 등 다양한 통신'
       ],
-      꼬리표: ['PLC 연동', 'RS485, TCP/IP', '소형~대형'],
+      tags: ['PLC 연동', 'RS485, TCP/IP', '소형~대형'],
       productUrl: 'https://ledbox001.cafe24.com/category/%EC%82%B0%EC%97%85%EC%9A%A9-%EC%A0%84%EA%B4%91%ED%8C%90/72/'
     },
     {
@@ -379,11 +379,7 @@
           '<div class="lb04-tags">' + tagHtml + '</div>' +
           '<div class="lb04-actions">' +
             '<a href="' + item.productUrl + '" target="_top" class="lb04-btn lb04-btn-outline">제품 둘러보기</a>' +
-            '<a href="https://silvi31233-wq.github.io/ledbox-main1/section5.html"
-   target="_top"
-   class="lb04-btn lb04-btn-main">
-  견적 문의하기 &gt;
-</a>'+
+            '<a href="https://silvi31233-wq.github.io/ledbox-main1/section5.html" target="_top" class="lb04-btn lb04-btn-main">견적 문의하기 &gt;</a>' +
           '</div>' +
         '</div>' +
       '</article>';
@@ -391,23 +387,7 @@
 
   grid.innerHTML = products.map(makeCard).join('');
 
-  var target = document.getElementById('lb-quote-widget');
-  if (!target) {
-    console.log('lb-quote-widget 섹션을 찾지 못했습니다.');
-    return;
-  }
-
-  e.preventDefault();
-
-  var y = target.getBoundingClientRect().top + window.pageYOffset - 80;
-
-  window.scrollTo({
-    top: y,
-    behavior: 'smooth'
-  });
-});
-  
-   var cards = root.querySelectorAll('.lb04-card');
+  var cards = root.querySelectorAll('.lb04-card');
 
   function revealCards() {
     cards.forEach(function (card, index) {
@@ -434,6 +414,5 @@
   } else {
     revealCards();
   }
-  
 })();
 </script>
