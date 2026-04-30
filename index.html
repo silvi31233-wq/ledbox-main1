@@ -283,11 +283,40 @@
 
   #lb-section01-slider .lb01-board-screen div {
     display: grid;
-    grid-template-columns: 120px 1fr; /* 🔥 핵심 */
-    align-items: center;
+    grid-template-columns: .78fr 1fr;
     gap: 18px;
     align-items: center;
     min-width: 0;
+  }
+
+  /* 공공용 첫 두 줄만 정렬 */
+  #lb-section01-slider .lb01-board-screen.공개 div:not(.wide) {
+    grid-template-columns: 130px 1fr;
+  }
+
+  /* 공공용 긴 안내문은 한 줄 전체 사용 */
+  #lb-section01-slider .lb01-board-screen.공개 .wide {
+    display: block;
+    grid-template-columns: none;
+  }
+
+  #lb-section01-slider .lb01-board-screen.공개 .wide b {
+    display: block;
+    width: 100%;
+    text-align: left;
+    white-space: 지금rap;
+    font-size: clamp(20px, 1.75vw, 28px);
+  }
+
+  /* 공공용 라벨 줄바꿈 방지 */
+  #lb-section01-slider .lb01-board-screen.공개 div:not(.wide) span {
+    white-space: 지금rap;
+    font-size: clamp(20px, 1.65vw, 28px);
+  }
+
+  #lb-section01-slider .lb01-board-screen.공개 div:not(.wide) b {
+    text-align: right;
+    white-space: 지금rap;
   }
 
   #lb-section01-slider .lb01-board-screen .wide {
