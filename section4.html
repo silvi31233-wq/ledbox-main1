@@ -319,8 +319,7 @@
         'RS485, TCP/IP 통신'
       ],
       꼬리표: ['멀티센서 연동', 'WBGT 자동계산', '방수방진'],
-      productUrl: 'https://ledbox001.cafe24.com/category/WBGT-%EC%B2%B4%EA%B0%90%EC%98%A8%EB%8F%84/78/',
-      quoteUrl: '#lb-quote-widget'
+      productUrl: 'https://ledbox001.cafe24.com/category/WBGT-%EC%B2%B4%EA%B0%90%EC%98%A8%EB%8F%84/78/'
     },
     {
       num: '02',
@@ -336,8 +335,7 @@
         'RS485, TCP/IP, Modbus 등 다양한 통신'
       ],
       꼬리표: ['PLC 연동', 'RS485, TCP/IP', '소형~대형'],
-      productUrl: 'https://ledbox001.cafe24.com/category/%EC%82%B0%EC%97%85%EC%9A%A9-%EC%A0%84%EA%B4%91%ED%8C%90/72/',
-      quoteUrl: '#lb-quote-widget'
+      productUrl: 'https://ledbox001.cafe24.com/category/%EC%82%B0%EC%97%85%EC%9A%A9-%EC%A0%84%EA%B4%91%ED%8C%90/72/'
     },
     {
       num: '03',
@@ -353,8 +351,7 @@
         '무상A/S 1년 보증'
       ],
       꼬리표: ['기상·환경 정보', '원격관리', '1년 A/S'],
-      productUrl: 'https://ledbox001.cafe24.com/category/%ED%92%80%EC%B9%BC%EB%9D%BC%EC%9D%BC%EB%B0%98%ED%98%95/53/',  // 🔥 상업용 링크
-      quoteUrl: '#lb-quote-widget'
+      productUrl: 'https://ledbox001.cafe24.com/category/%ED%92%80%EC%B9%BC%EB%9D%BC%EC%9D%BC%EB%B0%98%ED%98%95/53/'
     }
   ];
 
@@ -381,14 +378,23 @@
           '<ul class="lb04-list">' + listHtml + '</ul>' +
           '<div class="lb04-tags">' + tagHtml + '</div>' +
           '<div class="lb04-actions">' +
-            '<a href="' + item.productUrl + '" class="lb04-btn lb04-btn-outline">제품 둘러보기</a>' +
-            '<a href="' + item.quoteUrl + '" class="lb04-btn lb04-btn-main">견적 문의하기 &gt;</a>' +
+            '<a href="' + item.productUrl + '" target="_top" class="lb04-btn lb04-btn-outline">제품 둘러보기</a>' +
+            '<a href="#lb-quote-widget" class="lb04-btn lb04-btn-main lb04-quote-btn">견적 문의하기 &gt;</a>' +
           '</div>' +
         '</div>' +
       '</article>';
   }
 
   grid.innerHTML = products.map(makeCard).join('');
+
+  root.querySelectorAll('.lb04-quote-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      var target = document.querySelector('#lb-quote-widget');
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
 
   var cards = root.querySelectorAll('.lb04-card');
 
