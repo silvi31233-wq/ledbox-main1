@@ -32,9 +32,9 @@
             <div id="lb01BoardScreen" class="lb01-board-screen wbgt"></div>
 
             <div class="lb01-board-specs">
-              <span><b>24H</b><small>상시 운영</small></span>
-              <span><b>PLC</b><small>설비 연동</small></span>
-              <span><b>IP</b><small>실외 대응</small></span>
+              <span><b id="lb01Spec1">중대재해</b><small id="lb01Spec1Sub">예방 활동</small></span>
+              <span><b id="lb01Spec2">멀티센서</b><small id="lb01Spec2Sub">정밀 측정</small></span>
+              <span><b id="lb01Spec3">기후이상</b><small id="lb01Spec3Sub">적극대응</small></span>
             </div>
 
             <p id="lb01BoardCaption">WBGT</p>
@@ -575,7 +575,11 @@
       solutionLink: 'https://ledbox001.cafe24.com/category/WBGT-%EC%B2%B4%EA%B0%90%EC%98%A8%EB%8F%84/78/',
       boardType: 'wbgt',
       boardCaption: 'WBGT',
-      specs: [],
+      specs: [
+        ['중대재해', '예방 활동'],
+        ['멀티센서', '정밀 측정'],
+        ['기후이상', '적극대응']
+      ],
       boardHtml:
         '<div><span>상태</span><b class="red">위험</b></div>' +
         '<div><span>온도</span><b class="green">34.5℃</b></div>' +
@@ -591,7 +595,11 @@
       solutionLink: 'https://ledbox001.cafe24.com/category/%EC%82%B0%EC%97%85%EC%9A%A9-%EC%A0%84%EA%B4%91%ED%8C%90/72/',
       boardType: 'industry',
       boardCaption: '산업용',
-      specs: [],
+      specs: [
+        ['IoT', '센서 연동'],
+        ['생산 관리', '인디게이터'],
+        ['안전 관리', '행동유도형']
+      ],
       boardHtml:
         '<div><span>CO₂</span><b class="cyan">800ppm</b></div>' +
         '<div><span>이송</span><b class="green">34m/min</b></div>' +
@@ -607,7 +615,11 @@
       solutionLink: 'https://ledbox001.cafe24.com/category/%EA%B4%80%EA%B3%B5%EC%84%9C%C2%B7%EA%B3%B5%EA%B3%B5%EC%9A%A9/79/',
       boardType: 'public',
       boardCaption: '관공서용',
-      specs: [],
+      specs: [
+        ['기상청', 'API연동'],
+        ['안전·안내', '행동유도형'],
+        ['방수·방진', '밀폐형']
+      ],
       boardHtml:
         '<div><span>미세먼지</span><b class="yellow">주의</b></div>' +
         '<div><span>PM10</span><b class="red">98</b></div>' +
@@ -623,7 +635,11 @@
       solutionLink: '',
       boardType: 'industry',
       boardCaption: '특수목적',
-      specs: [],
+      specs: [
+        ['IoT', '센서 연동'],
+        ['생산 관리', '인디게이터'],
+        ['안전 관리', '행동유도형']
+      ],
       boardHtml:
         '<div><span>CO₂</span><b class="cyan">800ppm</b></div>' +
         '<div><span>이송</span><b class="green">34m/min</b></div>' +
@@ -639,7 +655,11 @@
       solutionLink: 'https://ledbox001.cafe24.com/category/%ED%92%80%EC%B9%BC%EB%9D%BC%EC%9D%BC%EB%B0%98%ED%98%95/53/',
       boardType: 'commercial',
       boardCaption: '상업용',
-      specs: [],
+      specs: [
+        ['고휘도', '주간 시인성'],
+        ['영상·사진', '고해상도'],
+        ['다목적성', '야외·실내']
+      ],
       boardHtml: '<div class="lb01-commercial-img"></div>'
     }
   ];
@@ -657,6 +677,7 @@
   var solutionBtn = root.querySelector('#lb01SolutionBtn');
   var boardScreen = root.querySelector('#lb01BoardScreen');
   var boardCaption = root.querySelector('#lb01BoardCaption');
+
   var spec1 = root.querySelector('#lb01Spec1');
   var spec1Sub = root.querySelector('#lb01Spec1Sub');
   var spec2 = root.querySelector('#lb01Spec2');
@@ -668,6 +689,16 @@
     badges.innerHTML = items.map(function (item) {
       return '<span>' + item + '</span>';
     }).join('');
+  }
+
+  function renderSpecs(specs) {
+    if (!specs || specs.length !== 3) return;
+    spec1.textContent = specs[0][0];
+    spec1Sub.textContent = specs[0][1];
+    spec2.textContent = specs[1][0];
+    spec2Sub.textContent = specs[1][1];
+    spec3.textContent = specs[2][0];
+    spec3Sub.textContent = specs[2][1];
   }
 
   function setSlide(index) {
@@ -686,15 +717,7 @@
       boardScreen.className = 'lb01-board-screen ' + item.boardType;
       boardScreen.innerHTML = item.boardHtml;
       boardCaption.textContent = item.boardCaption;
-
-      if(item.specs && item.specs.length === 3){
-        spec1.textContent = item.specs[0][0];
-        spec1Sub.textContent = item.specs[0][1];
-        spec2.textContent = item.specs[1][0];
-        spec2Sub.textContent = item.specs[1][1];
-        spec3.textContent = item.specs[2][0];
-        spec3Sub.textContent = item.specs[2][1];
-      }
+      renderSpecs(item.specs);
 
       if (solutionBtn) {
         if (item.solutionLink) {
